@@ -1,0 +1,61 @@
+# Unity
+.DS_Store
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.opendb
+*.VC.db
+
+# Unity Generated Folders
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+UserSettings/
+MemoryCaptures/
+AssetBundles/
+ProfilerLogs/
+
+# Visual Studio and Rider
+.vs/
+.idea/
+*.DotSettings
+*.userprefs
+
+# macOS
+.DS_Store
+
+# Package Manager
+Packages/manifest.json.meta
+Packages/packages-lock.json
+
+# Local files
+# You might want to uncomment these lines if you have local-only assets
+# that should not be committed to the repository.
+# Assets/StreamingAssets/
+# Assets/Resources/
+# Assets/Scenes/
+# Assets/Scripts/
+# Assets/Editor/
+# Assets/Plugins/
+# Assets/Materials/
+# Assets/Textures/
+# Assets/Audio/
+# Assets/Fonts/
+# Assets/Prefabs/
+# Assets/Animations/
+# Assets/Models/
+
+# Specific files to ignore
+# For example, ignore a specific asset or a build file
+# MySpecificAsset.asset
+# MyGame.exe
