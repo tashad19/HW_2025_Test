@@ -5,13 +5,16 @@ public class DoofusController : MonoBehaviour
 {
     Rigidbody rb;
     ConfigLoader config;
+    ScoreManager scoreManager;
     float speed;
     Vector2 moveInput;
+    GameObject lastPulpit;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         config = FindFirstObjectByType<ConfigLoader>();
+        scoreManager = FindFirstObjectByType<ScoreManager>();
         speed = config.Config.player_data.speed;
     }
 
@@ -35,5 +38,14 @@ public class DoofusController : MonoBehaviour
     {
         Vector3 move = new Vector3(moveInput.x, 0, moveInput.y) * speed;
         rb.MovePosition(rb.position + move * Time.fixedDeltaTime);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject != lastPulpit && other.gameObject.tag == "Pulpit")
+        {
+            lastPulpit = other.gameObject;
+            scoreManager.AddPoint();
+        }
     }
 }
