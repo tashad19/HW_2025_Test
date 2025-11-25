@@ -9,6 +9,7 @@ public class DoofusController : MonoBehaviour
     float speed;
     Vector2 moveInput;
     GameObject lastPulpit;
+    
 
     void Start()
     {

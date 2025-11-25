@@ -6,7 +6,7 @@ public class ConfigLoader : MonoBehaviour
 
     void Awake()
     {
-        TextAsset json = Resources.Load<TextAsset>("doofus");
+        TextAsset json = Resources.Load<TextAsset>("doofus_diary");
         Config = JsonUtility.FromJson<DoofusConfig>(json.text);
     }
 }
