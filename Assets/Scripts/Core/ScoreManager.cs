@@ -15,7 +15,15 @@ public class ScoreManager : MonoBehaviour
     public void AddPoint()
     {
         Score++;
+        ScoreStorage.CurrentScore = Score;
+
+        if (Score > ScoreStorage.HighScore)
+        {
+            ScoreStorage.HighScore = Score;
+        }
+        
         UpdateUI();
+
     }
 
     void UpdateUI()
