@@ -8,10 +8,20 @@ public class GameOverHandler : MonoBehaviour
     [SerializeField] string gameOverSceneName = "GameOverScene";
 
     bool isGameOver;
+    float delayBeforeCheck = 1f;
+
+    void Start()
+    {
+        isGameOver = false;
+    }
 
     void Update()
     {
         if (isGameOver)
+            return;
+
+        delayBeforeCheck -= Time.deltaTime;
+        if (delayBeforeCheck > 0f)
             return;
 
         if (player == null)

@@ -14,6 +14,14 @@ public class PulpitManager : MonoBehaviour
     void Start()
     {
         config = FindFirstObjectByType<ConfigLoader>();
+        StartCoroutine(WaitForConfig());
+    }
+
+    System.Collections.IEnumerator WaitForConfig()
+    {
+        while (config == null || config.IsLoaded == false)
+            yield return null;
+
         SpawnInitial();
         StartCoroutine(SpawnLoop());
     }
