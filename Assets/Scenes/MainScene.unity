@@ -776,6 +776,7 @@ GameObject:
   - component: {fileID: 1594317747}
   - component: {fileID: 1594317746}
   - component: {fileID: 1594317748}
+  - component: {fileID: 1594317749}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -822,6 +823,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17ad1c7f82c9ba349b0f686c10e6315e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreManager
+--- !u!114 &1594317749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594317745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28b5d7a99eab0fb46944b1a46bf72bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameOverHandler
+  player: {fileID: 235571117}
+  fallThreshold: -5
+  gameOverSceneName: GameOverScene
 --- !u!1 &1850986860
 GameObject:
   m_ObjectHideFlags: 0
