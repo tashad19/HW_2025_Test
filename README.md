@@ -6,10 +6,11 @@ Doofus Adventure is a 3D platform survival game where you guide Doofus across di
 
 ## Gameplay Preview 🎮
 
-<img width="1919" height="833" alt="image" src="https://github.com/user-attachments/assets/3dab90ae-8419-4ae8-9367-8804ece40749" />
-<img width="1919" height="828" alt="image" src="https://github.com/user-attachments/assets/42069b37-52a3-4dec-8395-201bf7fce715" />
-<img width="1919" height="833" alt="image" src="https://github.com/user-attachments/assets/81e566e4-388e-41ff-9dde-9561b139bc24" />
-<img width="1919" height="824" alt="image" src="https://github.com/user-attachments/assets/45f207fc-d56d-417c-9072-3d91d3d1a1e0" />
+<video src="https://github.com/user-attachments/assets/b89cec7b-0880-4541-bee3-34728daed6b3" width="300" height="150" controls>
+</video>
+<img width="691" height="300" alt="image" src="https://github.com/user-attachments/assets/3dab90ae-8419-4ae8-9367-8804ece40749" />
+<img width="691" height="300" alt="image" src="https://github.com/user-attachments/assets/1328fe57-375c-4fc6-9df1-05f50adc4893" />
+<img width="691" height="300" alt="image" src="https://github.com/user-attachments/assets/036c4e5c-2bba-4dc6-b670-c67bc5323e38" />
 
 ---
 
