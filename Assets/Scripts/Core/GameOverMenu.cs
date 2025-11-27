@@ -7,7 +7,7 @@ public class GameOverMenu : MonoBehaviour
 
     public void Retry()
     {
-        Time.timeScale = 1f;
+        // Time.timeScale = 1f;  // not really needed delay
         ScoreStorage.CurrentScore = 0;
         SceneManager.LoadSceneAsync(mainSceneName);
     }

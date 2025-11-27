@@ -4,17 +4,17 @@ using TMPro;
 public class ScoreManager : MonoBehaviour
 {
     public int Score { get; private set; }
-    TextMeshProUGUI scoreText;
+    public TextMeshProUGUI scoreText; 
 
     void Start()
     {
-        scoreText = FindFirstObjectByType<TextMeshProUGUI>();
         UpdateUI();
     }
 
     public void AddPoint()
     {
         Score++;
+        
         ScoreStorage.CurrentScore = Score;
 
         if (Score > ScoreStorage.HighScore)
@@ -23,7 +23,6 @@ public class ScoreManager : MonoBehaviour
         }
         
         UpdateUI();
-
     }
 
     void UpdateUI()

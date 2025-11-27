@@ -9,7 +9,9 @@ public class PulpitManager : MonoBehaviour
     ConfigLoader config;
     List<GameObject> pulpits = new List<GameObject>();
     Vector3 currentPos = Vector3.zero;
-    bool spawning;
+
+    private float animationDuration = 1.0f; 
+    private float pulseSpeed = 10f; 
 
     void Start()
     {
@@ -46,10 +48,10 @@ public class PulpitManager : MonoBehaviour
     {
         Vector3[] dirs = new Vector3[]
         {
-            new Vector3(9,0,0),
-            new Vector3(-9,0,0),
-            new Vector3(0,0,9),
-            new Vector3(0,0,-9)
+            new Vector3(9.01f,0,0),
+            new Vector3(-9.01f,0,0),
+            new Vector3(0,0,9.01f),
+            new Vector3(0,0,-9.01f)
         };
 
         Vector3 nextPos = currentPos + dirs[Random.Range(0, dirs.Length)];
@@ -66,7 +68,7 @@ public class PulpitManager : MonoBehaviour
 
         if (pulpits.Count > 2)
         {
-            Destroy(pulpits[0]);
+            if(pulpits[0] != null) Destroy(pulpits[0]);
             pulpits.RemoveAt(0);
         }
 
@@ -75,12 +77,67 @@ public class PulpitManager : MonoBehaviour
 
     IEnumerator DestroyAfterTime(GameObject p)
     {
-        float t = Random.Range(config.Config.pulpit_data.min_pulpit_destroy_time, config.Config.pulpit_data.max_pulpit_destroy_time);
-        yield return new WaitForSeconds(t);
+        float totalLifeTime = Random.Range(config.Config.pulpit_data.min_pulpit_destroy_time, config.Config.pulpit_data.max_pulpit_destroy_time);
+        
+        float animTime = animationDuration;
+        float waitTime = totalLifeTime - animTime;
+
+        if (waitTime < 0)
+        {
+            waitTime = 0;
+            animTime = totalLifeTime;
+        }
+
+        if (waitTime > 0)
+        {
+            yield return new WaitForSeconds(waitTime);
+        }
+
+        if (p != null)
+        {
+            Renderer[] allRenderers = p.GetComponentsInChildren<Renderer>();
+            
+            Dictionary<Material, Color> originalColors = new Dictionary<Material, Color>();
+
+            foreach (Renderer r in allRenderers)
+            {
+                foreach (Material m in r.materials)
+                {
+                    if (!originalColors.ContainsKey(m))
+                    {
+                        originalColors.Add(m, m.color);
+                    }
+                }
+            }
+
+            float timer = 0f;
+
+            while (timer < animTime)
+            {
+                if (p == null) yield break;
+
+                timer += Time.deltaTime;
+                float alpha = Mathf.Lerp(0.2f, 1.0f, (Mathf.Sin(timer * pulseSpeed) + 1.0f) / 2.0f);
+
+                foreach (var entry in originalColors)
+                {
+                    Material mat = entry.Key;
+                    Color baseColor = entry.Value;
+                    
+                    Color newColor = baseColor;
+                    newColor.a = alpha;
+                    mat.color = newColor;
+                }
+
+                yield return null;
+            }
+        }
+
         if (pulpits.Contains(p))
         {
             pulpits.Remove(p);
         }
-        Destroy(p);
+        
+        if (p != null) Destroy(p);
     }
 }
