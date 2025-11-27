@@ -4,7 +4,16 @@ Doofus Adventure is a 3D platform survival game where you guide Doofus across di
 
 ---
 
-## Game Rules
+## Gameplay Preview 🎮
+
+<img width="1919" height="833" alt="image" src="https://github.com/user-attachments/assets/3dab90ae-8419-4ae8-9367-8804ece40749" />
+<img width="1919" height="828" alt="image" src="https://github.com/user-attachments/assets/42069b37-52a3-4dec-8395-201bf7fce715" />
+<img width="1919" height="833" alt="image" src="https://github.com/user-attachments/assets/81e566e4-388e-41ff-9dde-9561b139bc24" />
+<img width="1919" height="824" alt="image" src="https://github.com/user-attachments/assets/45f207fc-d56d-417c-9072-3d91d3d1a1e0" />
+
+---
+
+## Game Rules 📋
 
 ### Objective
 Stay alive by moving onto new pulpits before they disappear.
@@ -19,7 +28,7 @@ Stay alive by moving onto new pulpits before they disappear.
 
 ---
 
-## How to Play
+## How to Play ✅
 
 ### Controls
 - Move using W A S D keys or arrow keys
@@ -27,25 +36,10 @@ Stay alive by moving onto new pulpits before they disappear.
 - Try to reach as many pulpits as possible
 - Do not fall off the platform
 - Click Retry to play again
-
+- 
 ---
 
-## Screenshots and Gameplay Preview
-
-### Gameplay screenshots
-
-<img width="1919" height="833" alt="image" src="https://github.com/user-attachments/assets/3dab90ae-8419-4ae8-9367-8804ece40749" />
-<img width="1919" height="828" alt="image" src="https://github.com/user-attachments/assets/42069b37-52a3-4dec-8395-201bf7fce715" />
-<img width="1919" height="833" alt="image" src="https://github.com/user-attachments/assets/81e566e4-388e-41ff-9dde-9561b139bc24" />
-<img width="1919" height="824" alt="image" src="https://github.com/user-attachments/assets/45f207fc-d56d-417c-9072-3d91d3d1a1e0" />
-
-
-### Short gameplay video
-(Insert video link here)
-
----
-
-## Project Structure
+## Project Structure 🧱
 
 ```text
 Assets/
@@ -93,7 +87,7 @@ Assets/
 
 ---
 
-## Levels Implemented
+## Levels Implemented 🚀
 
 ### Level 1
 - Player movement
@@ -112,7 +106,7 @@ Assets/
 
 ---
 
-## Running the Project
+## Running the Project 🛠️
 
 ### Requirements
 - Unity version 6 or newer
@@ -131,14 +125,9 @@ Optionally
 
 ---
 
-## About the Developer
+## About the Developer 👤
 
-**Tashadur Rahman**  
-B Tech CSE  
-Vellore Institute of Technology  
+<b>Tashadur Rahman</b>, B Tech CSE, VIT 
 
 Project submitted for  
 HitWicket Game Developer Assignment 2025  
-
-I enjoyed building this project and exploring Unity features in a creative way. This assignment helped me learn scene management, runtime configuration, scoring systems, custom visuals, and effects.
-
